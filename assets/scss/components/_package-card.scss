@@ -1,0 +1,100 @@
+.package-card {
+  display: flex;
+  flex-direction: column;
+  width: 634px;
+  height: max-content;
+  gap: $large;
+  padding: $xxl;
+  box-shadow: $low-shadow;
+  border-radius: $large;
+  background: white;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 550px;
+    top: -72px;
+    left: -72px;
+    border-radius: $text-xl;
+    z-index: -1;
+    background-color: $waikawaGray;
+  }
+
+  .package {
+    &-information {
+      display: flex;
+      gap: $xxl;
+      align-items: center;
+      justify-content: center;
+      padding: $medium;
+      background-color: $athensGray;
+      border: 1px solid $snuff;
+      border-radius: $small;
+      &_item {
+        display: flex;
+        flex-direction: column;
+        gap: $xs;
+        color: $bunting;
+      }
+      &_title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $xxs;
+        text-transform: capitalize;
+        color: $waikawaGray;
+      }
+    }
+    &-shipping {
+      &__list {
+        display: flex;
+        flex-direction: column;
+        margin-right: $xl;
+      }
+      &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-left: $medium;
+        gap: $xs;
+        color: $bunting;
+        font-size: $text-md;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          height: 17px;
+          width: 17px;
+          border: 1px solid $waikawaGray;
+          border-radius: 50%;
+          background-color: white;
+          z-index: 2;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0px;
+          left: 8px;
+          height: 100%;
+          width: 1px;
+          background-color: $waikawaGray;
+        }
+
+        &.-completed {
+          &::before {
+            border: 3px solid $waikawaGray;
+            transition: width 2s, height 2s, transform 2s;
+          }
+        }
+      }
+      &__date {
+        color: $waikawaGray;
+        padding-bottom: $medium;
+        font-size: $text-xs;
+      }
+    }
+  }
+}

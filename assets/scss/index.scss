@@ -1,0 +1,27 @@
+@import "./base";
+@import "./abstracts";
+@import "./components";
+@import "./layouts";
+@import "./shared";
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200vh;
+  background-color: $mercury-white;
+}

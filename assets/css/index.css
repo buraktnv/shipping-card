@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@100;500;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin-bottom: 32px;
+}
+
+.package-card {
+  display: flex;
+  flex-direction: column;
+  width: 634px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  gap: 32px;
+  padding: 56px;
+  box-shadow: 0 0px 0.5px rgba(0, 0, 0, 0.057), 0 0px 1.8px rgba(0, 0, 0, 0.083), 0 0px 8px rgba(0, 0, 0, 0.14);
+  border-radius: 32px;
+  background: white;
+  position: relative;
+}
+.package-card::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 550px;
+  top: -72px;
+  left: -72px;
+  border-radius: 32px;
+  z-index: -1;
+  background-color: #60679f;
+}
+.package-card .package-information {
+  display: flex;
+  gap: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #f7f7fa;
+  border: 1px solid #e3e5f1;
+  border-radius: 16px;
+}
+.package-card .package-information_item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #10153E;
+}
+.package-card .package-information_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-transform: capitalize;
+  color: #60679f;
+}
+.package-card .package-shipping__list {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+}
+.package-card .package-shipping__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  gap: 8px;
+  color: #10153E;
+  font-size: 16px;
+}
+.package-card .package-shipping__item::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 17px;
+  width: 17px;
+  border: 1px solid #60679f;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 2;
+}
+.package-card .package-shipping__item::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 8px;
+  height: 100%;
+  width: 1px;
+  background-color: #60679f;
+}
+.package-card .package-shipping__item.-completed::before {
+  border: 3px solid #60679f;
+  transition: width 2s, height 2s, transform 2s;
+}
+.package-card .package-shipping__date {
+  color: #60679f;
+  padding-bottom: 24px;
+  font-size: 12px;
+}
+
+.title {
+  font-size: 32px;
+  font-family: "Merriweather", serif;
+  color: #10153e;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+*:before,
+*:after {
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200vh;
+  background-color: #e5e5e5;
+}
