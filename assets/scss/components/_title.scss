@@ -5,3 +5,14 @@
   font-weight: 700;
   line-height: $xl;
 }
+
+.subtitle {
+  font-size: $text-md;
+  font-weight: $font-bold;
+  color: $bunting;
+
+  &-description {
+    font-size: $text-sm;
+    color: $kimberly;
+  }
+}

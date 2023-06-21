@@ -1,0 +1,112 @@
+.billing {
+  @include flex(column, 44px, baseline, baseline);
+  padding: $xxl $xl4;
+  position: relative;
+
+  &-table {
+    width: 600px;
+
+    &__row:hover {
+      box-shadow: 0px 8px 19px rgba(223, 223, 253, 0.6);
+      border-radius: $xs;
+    }
+    &__row {
+      padding: $small 0;
+    }
+    &__row:last-child:hover {
+      box-shadow: none;
+    }
+  }
+
+  &-title {
+    text-align: left;
+    font-size: $text-sm;
+    font-weight: $font-medium;
+    color: $kimberly;
+    padding: $small;
+  }
+
+  &-item {
+    color: $bunting;
+    font-size: $text-md;
+    padding: $small;
+    vertical-align: middle;
+
+    &.-bordered {
+      @include flex;
+      border: 1px solid $ghost;
+      border-radius: 8px;
+      padding: $xs $small;
+      cursor: pointer;
+      margin: $small 0px;
+
+      &:hover {
+        box-shadow: 0px 8px 19px rgba(223, 223, 253, 0.6);
+      }
+    }
+
+    &.-flamingo {
+      color: $flamingo-text;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .payment {
+    @include flex(column, $medium, baseline);
+    width: 600px;
+
+    .credit {
+      &-list {
+        @include flex(column, $medium, baseline);
+      }
+
+      &-type {
+        border: 1px solid $ghost;
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      &-item {
+        @include flex(row, $medium, center, space-between);
+        width: 600px;
+
+        .card-detail {
+          color: $bunting;
+        }
+      }
+    }
+  }
+
+  .subscription {
+    position: absolute;
+    right: 56px;
+    top: 162px;
+    background-color: $flamingo;
+    padding: $large;
+    color: $white;
+    border-radius: $small;
+    box-shadow: 0px 8px 19px rgba(223, 223, 253, 0.6);
+
+    &-title {
+      font-size: $text-sm;
+      font-weight: $font-medium;
+      margin-bottom: $small;
+    }
+
+    &-type {
+      font-size: $text-lg;
+      font-weight: $font-bold;
+      margin-bottom: $xxs;
+    }
+
+    &-date {
+      font-size: $text-sm;
+      margin-bottom: $small;
+    }
+
+    .button.-flamingo {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.dashboard-layout {
+  display: grid;
+  width: 1320px;
+  height: 880px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  box-shadow: $low-shadow;
+  border-radius: $large;
+  margin: $xl auto;
+
+  main {
+    grid-column: span 4 / span 4;
+  }
+}

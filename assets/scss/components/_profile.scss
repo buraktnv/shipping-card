@@ -1,0 +1,22 @@
+.profile {
+  display: flex;
+  gap: $small;
+  cursor: pointer;
+
+  &-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: $small;
+    padding: 1px;
+  }
+
+  &-fullName {
+    font-size: $text-md;
+    color: $bunting;
+  }
+
+  &-tag {
+    font-size: $text-sm;
+    color: $kimberly;
+  }
+}

@@ -1,0 +1,15 @@
+.button {
+  padding: $xs $small;
+  background-color: transparent;
+  color: $bunting;
+  font-size: $text-md;
+  border-radius: 8px;
+  border: 1px solid $ghost;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 8px 19px rgba(172, 172, 172, 0.253);
+  }
+}

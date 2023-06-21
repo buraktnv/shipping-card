@@ -1,0 +1,88 @@
+.dashboard-nav {
+  @include flex(column, 0px, baseline, baseline);
+  height: 100%;
+  padding: $xl $large;
+  background-color: $titanWhite;
+  border-radius: $large 0px 0px $large;
+  position: relative;
+
+  .profile {
+    margin-bottom: $large;
+  }
+
+  .nav {
+    &-list {
+      @include flex(column, $xs, baseline);
+      gap: $xs;
+    }
+
+    &-item {
+      @include flex(row, 10px);
+      color: $kimberly;
+      padding: $xs;
+      cursor: pointer;
+      position: relative;
+
+      &.-active {
+        color: $bunting;
+      }
+
+      &.-active::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 6px;
+        height: 100%;
+        background-color: $flamingo;
+        border-radius: 24px;
+        transform: translateX(0);
+        z-index: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 6px;
+        height: 100%;
+        background-color: $flamingo;
+        border-radius: 24px;
+        transition: all 0.3s;
+        transform: translateX(-300%);
+        z-index: -1;
+      }
+
+      &:hover {
+        color: $bunting;
+
+        &::before {
+          transform: translateX(0);
+          z-index: 1;
+        }
+
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .button.-borderless {
+    @include flex(row, $xs, center, baseline);
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    color: $kimberly;
+    font-size: $text-sm;
+    padding: $medium $large;
+    box-shadow: none;
+
+    &:hover {
+      color: $bunting;
+      transition: all 0.2s;
+    }
+  }
+}
