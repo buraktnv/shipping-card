@@ -3,6 +3,7 @@
   padding: $xxl $xl4;
   position: relative;
   background-color: $white;
+  border-radius: 0px $large $large 0px;
 
   &-table {
     width: 600px;
@@ -39,7 +40,7 @@
       border-radius: 8px;
       padding: $xs $small;
       cursor: pointer;
-      margin: $small 0px;
+      margin: $small;
 
       &:hover {
         box-shadow: 0px 8px 19px rgba(223, 223, 253, 0.6);
@@ -67,7 +68,7 @@
       &__type {
         border: 1px solid $ghost;
         border-radius: 8px;
-        padding: 10px;
+        padding: $xs;
       }
 
       &__item {

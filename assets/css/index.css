@@ -122,13 +122,11 @@ body {
 
 .title {
   font-size: 32px;
-  font-family: "Merriweather", serif;
   color: #10153e;
   font-weight: 700;
   line-height: 40px;
 }
 .title.-sub {
-  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #1a194d;
@@ -259,6 +257,7 @@ body {
   padding: 56px 72px;
   position: relative;
   background-color: white;
+  border-radius: 0px 32px 32px 0px;
 }
 .billing-table {
   width: 600px;
@@ -296,7 +295,7 @@ body {
   border-radius: 8px;
   padding: 8px 16px;
   cursor: pointer;
-  margin: 16px 0px;
+  margin: 16px;
 }
 .billing__item.-bordered:hover {
   box-shadow: 0px 8px 19px rgba(223, 223, 253, 0.6);
@@ -327,7 +326,7 @@ body {
 .billing .payment .credit__type {
   border: 1px solid #CBCBD9;
   border-radius: 8px;
-  padding: 10px;
+  padding: 8px;
 }
 .billing .payment .credit__item {
   display: flex;
@@ -376,6 +375,7 @@ body {
   border-radius: 8px;
   border: 1px solid #CBCBD9;
   border-radius: 8px;
+  text-transform: capitalize;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
 }

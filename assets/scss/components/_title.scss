@@ -1,12 +1,10 @@
 .title {
   font-size: $text-xl;
-  font-family: "Merriweather", serif;
   color: $bunting-blue;
   font-weight: 700;
   line-height: $xl;
 
   &.-sub {
-    font-family: "Poppins", sans-serif;
     font-size: $text-md;
     font-weight: $font-bold;
     color: $bunting;
