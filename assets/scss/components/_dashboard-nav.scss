@@ -16,7 +16,7 @@
       gap: $xs;
     }
 
-    &-item {
+    &__item {
       @include flex(row, 10px);
       color: $kimberly;
       padding: $xs;

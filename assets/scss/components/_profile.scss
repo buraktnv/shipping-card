@@ -3,19 +3,19 @@
   gap: $small;
   cursor: pointer;
 
-  &-avatar {
+  &__avatar {
     width: 55px;
     height: 55px;
     border-radius: $small;
     padding: 1px;
   }
 
-  &-fullName {
+  &__fullName {
     font-size: $text-md;
     color: $bunting;
   }
 
-  &-tag {
+  &__tag {
     font-size: $text-sm;
     color: $kimberly;
   }

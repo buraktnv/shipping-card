@@ -127,13 +127,13 @@ body {
   font-weight: 700;
   line-height: 40px;
 }
-
-.subtitle {
+.title.-sub {
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #1a194d;
 }
-.subtitle-description {
+.title.-sub.-description {
   font-size: 14px;
   color: #62618f;
 }
@@ -161,7 +161,7 @@ body {
   justify-content: center;
   gap: 8px;
 }
-.dashboard-nav .nav-item {
+.dashboard-nav .nav__item {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -172,10 +172,10 @@ body {
   cursor: pointer;
   position: relative;
 }
-.dashboard-nav .nav-item.-active {
+.dashboard-nav .nav__item.-active {
   color: #1a194d;
 }
-.dashboard-nav .nav-item.-active::before {
+.dashboard-nav .nav__item.-active::before {
   content: "";
   position: absolute;
   left: 0;
@@ -187,7 +187,7 @@ body {
   transform: translateX(0);
   z-index: 0;
 }
-.dashboard-nav .nav-item::before {
+.dashboard-nav .nav__item::before {
   content: "";
   position: absolute;
   left: 0;
@@ -200,11 +200,11 @@ body {
   transform: translateX(-300%);
   z-index: -1;
 }
-.dashboard-nav .nav-item:hover {
+.dashboard-nav .nav__item:hover {
   color: #1a194d;
   transition: all 0.3s;
 }
-.dashboard-nav .nav-item:hover::before {
+.dashboard-nav .nav__item:hover::before {
   transform: translateX(0);
   z-index: 1;
 }
@@ -235,17 +235,17 @@ body {
   gap: 16px;
   cursor: pointer;
 }
-.profile-avatar {
+.profile__avatar {
   width: 55px;
   height: 55px;
   border-radius: 16px;
   padding: 1px;
 }
-.profile-fullName {
+.profile__fullName {
   font-size: 16px;
   color: #1a194d;
 }
-.profile-tag {
+.profile__tag {
   font-size: 14px;
   color: #62618f;
 }
@@ -258,6 +258,7 @@ body {
   justify-content: baseline;
   padding: 56px 72px;
   position: relative;
+  background-color: white;
 }
 .billing-table {
   width: 600px;
@@ -272,20 +273,20 @@ body {
 .billing-table__row:last-child:hover {
   box-shadow: none;
 }
-.billing-title {
+.billing__title {
   text-align: left;
   font-size: 14px;
   font-weight: 500;
   color: #62618f;
   padding: 16px;
 }
-.billing-item {
+.billing__item {
   color: #1a194d;
   font-size: 16px;
   padding: 16px;
   vertical-align: middle;
 }
-.billing-item.-bordered {
+.billing__item.-bordered {
   display: flex;
   flex-direction: row;
   gap: 0px;
@@ -297,10 +298,10 @@ body {
   cursor: pointer;
   margin: 16px 0px;
 }
-.billing-item.-bordered:hover {
+.billing__item.-bordered:hover {
   box-shadow: 0px 8px 19px rgba(223, 223, 253, 0.6);
 }
-.billing-item.-flamingo {
+.billing__item.-flamingo {
   color: #ee6338;
   text-decoration: underline;
   cursor: pointer;
@@ -308,10 +309,13 @@ body {
 .billing .payment {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 0px;
   align-items: baseline;
   justify-content: center;
   width: 600px;
+}
+.billing .payment .credit {
+  margin-top: 24px;
 }
 .billing .payment .credit-list {
   display: flex;
@@ -320,12 +324,12 @@ body {
   align-items: baseline;
   justify-content: center;
 }
-.billing .payment .credit-type {
+.billing .payment .credit__type {
   border: 1px solid #CBCBD9;
   border-radius: 8px;
   padding: 10px;
 }
-.billing .payment .credit-item {
+.billing .payment .credit__item {
   display: flex;
   flex-direction: row;
   gap: 24px;
@@ -333,7 +337,7 @@ body {
   justify-content: space-between;
   width: 600px;
 }
-.billing .payment .credit-item .card-detail {
+.billing .payment .credit__detail {
   color: #1a194d;
 }
 .billing .subscription {
@@ -346,17 +350,17 @@ body {
   border-radius: 16px;
   box-shadow: 0px 8px 19px rgba(223, 223, 253, 0.6);
 }
-.billing .subscription-title {
+.billing .subscription__title {
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 16px;
 }
-.billing .subscription-type {
+.billing .subscription__type {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 4px;
 }
-.billing .subscription-date {
+.billing .subscription__date {
   font-size: 14px;
   margin-bottom: 16px;
 }
@@ -384,7 +388,7 @@ body {
   width: 1320px;
   height: 880px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  box-shadow: 0 0px 0.5px rgba(0, 0, 0, 0.057), 0 0px 1.8px rgba(0, 0, 0, 0.083), 0 0px 8px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 49px 32px -19px rgba(56, 56, 150, 0.15);
   border-radius: 32px;
   margin: 40px auto;
 }

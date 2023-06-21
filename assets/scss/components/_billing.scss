@@ -2,6 +2,7 @@
   @include flex(column, 44px, baseline, baseline);
   padding: $xxl $xl4;
   position: relative;
+  background-color: $white;
 
   &-table {
     width: 600px;
@@ -18,7 +19,7 @@
     }
   }
 
-  &-title {
+  &__title {
     text-align: left;
     font-size: $text-sm;
     font-weight: $font-medium;
@@ -26,7 +27,7 @@
     padding: $small;
   }
 
-  &-item {
+  &__item {
     color: $bunting;
     font-size: $text-md;
     padding: $small;
@@ -53,27 +54,28 @@
   }
 
   .payment {
-    @include flex(column, $medium, baseline);
+    @include flex(column, 0px, baseline);
     width: 600px;
 
     .credit {
+      margin-top: $medium;
+
       &-list {
         @include flex(column, $medium, baseline);
       }
 
-      &-type {
+      &__type {
         border: 1px solid $ghost;
         border-radius: 8px;
         padding: 10px;
       }
 
-      &-item {
+      &__item {
         @include flex(row, $medium, center, space-between);
         width: 600px;
-
-        .card-detail {
-          color: $bunting;
-        }
+      }
+      &__detail {
+        color: $bunting;
       }
     }
   }
@@ -88,19 +90,19 @@
     border-radius: $small;
     box-shadow: 0px 8px 19px rgba(223, 223, 253, 0.6);
 
-    &-title {
+    &__title {
       font-size: $text-sm;
       font-weight: $font-medium;
       margin-bottom: $small;
     }
 
-    &-type {
+    &__type {
       font-size: $text-lg;
       font-weight: $font-bold;
       margin-bottom: $xxs;
     }
 
-    &-date {
+    &__date {
       font-size: $text-sm;
       margin-bottom: $small;
     }
